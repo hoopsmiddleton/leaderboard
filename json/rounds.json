@@ -1,0 +1,450 @@
+[{
+    "Course": "Southern Dunes",
+    "Event": "Two-Man Scramble",
+    "Date": "Thu, Feb 24, 2022",
+    "Groups": [{
+        "Course": "Southern Dunes",
+        "Date": "Thu, Feb 24, 2022",
+        "Time": "7:36 AM",
+        "Group": "Group One",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Southern Dunes",
+        "Date": "2/24",
+        "Time": "7:45 AM",
+        "Group": "Group Two",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Southern Dunes",
+        "Date": "2/24",
+        "Time": "7:54 AM",
+        "Group": "Group Three",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      }
+    ]
+  }, {
+    "Course": "Southern Dunes",
+    "Event": "Head to Head",
+    "Date": "Thu, Feb 24, 2022",
+    "Groups": [{
+        "Course": "Southern Dunes",
+        "Date": "2/24",
+        "Time": "13:0",
+        "Event": "Head to Head",
+        "Group": "1",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Southern Dunes",
+        "Date": "2/24",
+        "Time": "13:9",
+        "Group": "2",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Southern Dunes",
+        "Date": "2/24",
+        "Time": "13:18",
+        "Group": "3",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      }
+    ]
+  },
+  {
+    "Course": "Highlands Reserve",
+    "Event": "Two Man Scramble",
+    "Date": "Fri, Feb 25, 2022",
+    "Groups": [{
+        "Course": "Highlands Reserve",
+        "Date": "2/25",
+        "Time": "8:4",
+        "Group": "1",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Highlands Reserve",
+        "Date": "2/25",
+        "Time": "8:12",
+        "Group": "2",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Highlands Reserve",
+        "Date": "2/25",
+        "Time": "8:20",
+        "Group": "3",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      }
+    ]
+  },
+  {
+    "Course": "Highlands Reserve",
+    "Event": "Head to Head",
+    "Date": "Fri, Feb 25, 2022",
+    "Groups": [{
+        "Course": "Highlands Reserve",
+        "Date": "2/25",
+        "Time": "13:0",
+        "Group": "1",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Highlands Reserve",
+        "Date": "2/25",
+        "Time": "13:8",
+        "Group": "2",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Highlands Reserve",
+        "Date": "2/25",
+        "Time": "13:16",
+        "Group": "3",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      }
+    ]
+  },
+  {
+    "Course": "Providence",
+    "Event": "Morning Two-Man Scramble",
+    "Date": "Sat, Feb 26, 2022",
+    "Groups": [{
+        "Course": "Providence",
+        "Date": "2/26",
+        "Time": "8:6",
+        "Group": "1",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Providence",
+        "Date": "2/26",
+        "Time": "8:14",
+        "Group": "2",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Providence",
+        "Date": "2/26",
+        "Time": "8:22",
+        "Group": "3",
+        "Event": "Two-Man Scramble",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      }
+    ]
+  },
+  {
+    "Course": "Providence",
+    "Event": "Afternoon Head to Head",
+    "Date": "Sat, Feb 26, 2022",
+    "Groups": [{
+        "Course": "Providence",
+        "Date": "2/26",
+        "Time": "13:2",
+        "Group": "1",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Providence",
+        "Date": "2/26",
+        "Time": "13:10",
+        "Group": "2",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      },
+      {
+        "Course": "Providence",
+        "Date": "2/26",
+        "Time": "13:18",
+        "Group": "3",
+        "Event": "Head to Head",
+        "T1P1": {
+          "name": "Matt Middleton",
+          "hdcp": 11
+        },
+        "T2P1": {
+          "name": "Rick Middleton",
+          "hdcp": 11
+        },
+        "T1P2": {
+          "name": "Joshua Middleton",
+          "hdcp": 12
+        },
+        "T2P2": {
+          "name": "Isaac Middleton",
+          "hdcp": 18
+        }
+      }
+    ]
+  }
+]
