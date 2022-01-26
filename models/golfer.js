@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const validator = require('validator')
 
 const golferSchema = new mongoose.Schema({
 
@@ -6,6 +7,20 @@ const golferSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		trim: true
+	},
+	password: {
+		type: String,
+		required: true,
+		trim: true,
+		validate(v) { 
+			if (!validator.isStrongPassword(v, {
+				minLength: 6,
+				minLowercase: 1,
+				minUppercase: 1
+				})) {
+				throw new Error('Password invalid')
+			}
+		}
 	},
 	team: {
 		type: String,

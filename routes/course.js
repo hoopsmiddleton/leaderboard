@@ -49,4 +49,43 @@ r.post('/leaderboard/course', async (req, res) => {
 	}
 })
 
+r.get('/leaderboard/pairings', (req, res) => {
+
+	res.render("pairings")
+})
+
+r.get('/leaderboard/course', async (req, res) => {
+
+
+	try {
+		const course = await Course.find({})
+		if (!course) {
+			return res.status(404).send()
+		}
+
+		res.send(course)
+
+	}
+	catch(e) {
+		res.status(500).send()	
+	}
+})
+
+r.get('/leaderboard/scorecard/:id', async (req, res) => {
+
+	const id = req.params.id
+	try {
+		const course = await Course.findOne({id})
+		if (!course) {
+			return res.status(404).send()
+		}
+
+		res.send(course)
+
+	}
+	catch(e) {
+		res.status(500).send()	
+	}
+})
+
 module.exports = r

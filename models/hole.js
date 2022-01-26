@@ -9,17 +9,36 @@ const holeSchema = new mongoose.Schema({
 	},
 	hole: {
 		type: Number,
-		required: true
+		required: true,
+		validate(v) {
+			if (v < 1 || v > 18) {
+				throw new Error('Invalid hole')
+			}
+		}
 	},
 	par: {
 		type: Number,
+		validate(v) {
+			if (v < 1 || v > 18) {
+				throw new Error('Invalid hole')
+			}
+		}
 	},
 	yards: {
 		type: Number,
+		min: [0, 'Hole yards must be positive']
 	},
 	Hdcp: {
 		type: Number,
+		validate(v) {
+			if (v < 1 || v > 18) {
+				throw new Error('Invalid hole hdcp')
+			}
+		}
 	},
+	image: {
+		type: Buffer
+	}
 
 }, {
 	timestamps: true
