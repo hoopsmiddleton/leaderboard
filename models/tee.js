@@ -55,4 +55,5 @@ teeSchema.virtual('holes', {
 
 const Tee = mongoose.model('Tee', teeSchema)
 
+// Export Tee
 module.exports = Tee
