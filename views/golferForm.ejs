@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style-form.css">
+	<title>Document</title>
+</head>
+
+<body>
+    <main>
+        <form name="golferInputForm" action="#" method="get">
+            <div class="form-box">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+            </div>
+            <div class="form-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-box">
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="pass" placeholder="Password" required>
+            </div>
+            <div class="form-box">
+                <label for="domain">Domain</label>
+                <select id="domain" name="domain">
+                    <option value="facebook">Facebook</option>
+                    <option value="github">Github</option>
+                    <option value="google">Google</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="twitter">Twitter</option>
+                </select>
+            </div>
+            <div class="form-box">
+                <button id="btnSend">Send</button>
+            </div>
+        </form>
+    </main>
+</body>
