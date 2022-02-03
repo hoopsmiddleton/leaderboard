@@ -12,29 +12,29 @@ const courseSchema = new mongoose.Schema({
 	},
 	addr1: {
 		type: String,
-		tim: true
+		trim: true
 	},
-        addr2: {
-                type: String,
-		tim: true
-        },
-        city: {
-                type: String,
-		tim: true
-        },
-        state: {
-                type: String,
-		tim: true
-        },
-        zip: {
-                type: String,
-		tim: true
-        },
+    addr2: {
+        type: String,
+		trim: true
+    },
+	city: {
+        type: String,
+		trim: true
+    },
+    state: {
+        type: String,
+		trim: true
+    },
+    zip: {
+        type: String,
+		trim: true
+    },
 	url: {
 		type: String,
 		tim: true,
 		validate(v) {
-			if (!validator.isUrl(v)) {
+			if (!validator.isURL(v)) {
 				throw new Error('Invalid URL')
 			}
 		}
