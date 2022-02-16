@@ -1,12 +1,17 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 const golferSchema = new mongoose.Schema({
 
 	name: {
 		type: String,
 		required: true,
+		trim: true
+	},
+	alias: {
+		type: String,
 		trim: true
 	},
 	email: {
@@ -45,11 +50,22 @@ const golferSchema = new mongoose.Schema({
 	timestamps: true
 })
 
+golferSchema.methods.genAuthToken = async function () {
+	const golfer = this
+	const token = jwt.sign( {_id: golfer._id.toString() }, 'thisismyfirstapptousejwt', {expiresIn: '1 day'})
+
+	// Storing a user's login token per device/browser.  To logout the token will need to be removed.
+	golfer.tokens = golfer.tokens.concat({token: token})
+	await golfer.save()
+
+	return token
+} 
+
 // Find Golfer with
 golferSchema.statics.findByCredentials = async (email, password) => {
 	
 	const golfer = await Golfer.findOne({email: email})
-	console.log(golfer)
+	
 	if (!golfer) {
 		throw new Error('Unable to find Golfer')
 	}
@@ -57,7 +73,7 @@ golferSchema.statics.findByCredentials = async (email, password) => {
 	const isMatch = await bcrypt.compare(password, golfer.password)
 	
 	if (!isMatch) {
-		console.log(`isMatch: ${isMatch}`)
+		
 		throw new Error('Unable to find Golfer')
 	}
 

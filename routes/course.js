@@ -6,8 +6,9 @@ const Hole = require('../models/hole')
 const express = require('express')
 
 const r = new express.Router()
+const URL = '/leaderboard/api/v1'
 
-r.post('/leaderboard/hole', async (req, res) => {
+r.post(`${URL}/hole`, async (req, res) => {
 
 	const hole = new Hole(req.body)
 
@@ -21,7 +22,7 @@ r.post('/leaderboard/hole', async (req, res) => {
 	}
 })
 
-r.post('/leaderboard/tee', async (req, res) => {
+r.post(`${URL}/tee`, async (req, res) => {
 
 	const tee = new Tee(req.body)
 
@@ -35,7 +36,7 @@ r.post('/leaderboard/tee', async (req, res) => {
 	}
 })
 
-r.post('/leaderboard/course', async (req, res) => {
+r.post(`${URL}/course`, async (req, res) => {
 
 	const course = new Course(req.body)
 
@@ -49,7 +50,26 @@ r.post('/leaderboard/course', async (req, res) => {
 	}
 })
 
-r.patch('/leaderboard/course/:id', async (req, res) => {
+r.post(`${URL}/courses`, async (req, res) => {
+	
+	const courses = req.body
+
+	try {
+
+		const c = await Course.collection.insertMany(courses)
+		
+		if (!c) {
+			res.status(500).send( {'errMsg': 'Unable to add courses'} )
+		}		
+	
+	} catch(e) {
+			res.status(500).send({"errMsg": 'Failed to add courses', 'error': e})	
+	}
+	res.status(202).send(courses)
+})
+
+
+r.patch(`${URL}/course/:id`, async (req, res) => {
 	const updates = Object.keys(req.body)
 	const allowedUpdates = ['name', 'addr1', 'addr2', 'city', 'state', 'zip', 'url', 'phone']
 	const isValidOp = updates.every((u) => {
@@ -97,12 +117,12 @@ r.patch('/leaderboard/course/:id', async (req, res) => {
 	}
 })
 
-r.get('/leaderboard/pairings', (req, res) => {
+r.get(`${URL}/pairings`, (req, res) => {
 
 	res.render("pairings")
 })
 
-r.get('/leaderboard/course', async (req, res) => {
+r.get(`${URL}/course`, async (req, res) => {
 
 
 	try {
@@ -119,7 +139,7 @@ r.get('/leaderboard/course', async (req, res) => {
 	}
 })
 
-r.get('/leaderboard/course/:id', async (req, res) => {
+r.get(`${URL}/course/:id`, async (req, res) => {
 
 	const id = req.params.id
 	try {
@@ -136,7 +156,7 @@ r.get('/leaderboard/course/:id', async (req, res) => {
 	}
 })
 
-r.delete('/leaderboard/course/:id', async (req, res) => {
+r.delete(`${URL}/course/:id`, async (req, res) => {
 
 	const id = req.params.id
 	try {

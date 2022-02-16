@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Middleton Open 2022 Pairings</title>
+</head>
+
+<body>
+    <header>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#">Golfers</a></li>
+            <li class="nav-item"><a href="#">Scoreboard</a></li>
+            <li class="nav-item"><a href="#">Rounds</a></li>
+        </ul>
+    </header>
+    <div class="grid-container">
+
+        <div id="golf-rounds">
+
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script type="text/javascript">
+        function leaderboard(roster) {
+
+            str1 = `
+                <div class="golf-round-container">
+                    <div class="golf-round-title">
+                        <div class="main-title">Title</div>
+                        <span class="subtitle-left">Course</span>
+                        <span class="subtitle-right">Date</span>
+                    </div>
+
+                    <table class="mgaTable mgaTableBorder" cellspacing="0">
+                        <tr class="mgaTableRow">
+                            <th class="mgaTableCol"><input type="checkbox"></th>
+                            <th class="mgaTableCol">Golfer</th>
+                            <th class="mgaTableCol">HDCP</th>
+                            <th class="mgaTableCol">Team</th>
+                        </tr>
+            `;
+            str1 += roster.map(function (g) {
+                return (`
+                <tr class="mgaTableRow">
+                    <td class="mgaTableCol"><input type="checkbox"></td>
+                    <td class="mgaTableCol">${g.name}</td>
+                    <td class="mgaTableCol">${g.Hdcp}</td>
+                    <td class="mgaTableCol">${g.team}</td>
+                </tr>`)
+            }).join('')
+
+            // roster.forEach((g, idx, garray) => {
+            //     let rowtype = (idx % 2 === 0) ? 'odd' : 'even';
+            //     str1 += `
+            //             <tr class="mgaTableRow ${rowtype}">
+            //                 <td class="mgaTableCol">${g.name}</td>
+            //                 <td class="mgaTableCol">${g.hdcp}</td>
+            //                 <td class="mgaTableCol">${g.team}</td>
+            //             </tr>
+            //             `;
+            //     str1 += '</table></div>'
+            //     return str1;
+            // }).join('')
+
+            str1 += '</table></div>'
+            document.getElementById('golf-rounds').innerHTML = str1;
+
+        }
+
+        fetch('http://localhost:3998/leaderboard/api/v1/golfers').then(function (res) {
+            return res.json();
+        }).then(function (r) {
+            leaderboard(r)
+        }).catch(function (e) {
+            console.error('Error: ');
+            console.error(e);
+        });
+    </script>
+</body>
+
+</html>
