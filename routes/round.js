@@ -36,8 +36,7 @@ router.patch('/leaderboard/round/:id', async (req, res) => {
 
 	const id = req.params.id
 	try {
-		
-
+	
 		// Must use this method to save updates in order to use Mongoose middleware such as hashing passwords
 		const round = await round.findById(id)
 		if (!round) {
@@ -51,7 +50,7 @@ router.patch('/leaderboard/round/:id', async (req, res) => {
 		})
 
 		// Updating array collection: db.rounds.update({'groups._id': ObjectId("620b47293ccb8f532142044a")},{"$set": {"groups.$.name": "Group Three"}})
-		
+
 		// Calling golfer.save() will now run any mongoose middleware define
 		await round.save()
 		
@@ -65,31 +64,50 @@ router.patch('/leaderboard/round/:id', async (req, res) => {
 	}
 })
 
-router.get('/leaderboard/round', async (req, res) => {
+router.get('/leaderboard/round/:id', async (req, res) => {
+	const id = req.params.id
 
-	const round = await Round.find({})
+	console.log(id)
+	const round = await Round.findById(id)
 			.populate('course')
 			.populate('groups.p1',{password:0,tokens:0})
 			.populate('groups.p2',{password:0,tokens:0})
 			.populate('groups.p3',{password:0,tokens:0})
 			.populate('groups.p4',{password:0,tokens:0})
+			
+	console.log(round)
+
 	res.render("round", {round: round})
+})
+
+router.get('/leaderboard/event', async (req, res) => {
+
+	const round = await Round.find({})
+			.populate('course')
+			
+	res.render("event", {round: round})
 })
 
 router.get(`${URL}/rounds`, async (req, res) => {
 
 	try {
 		const round = await Round.find({})
-			.populate('course')
+			.populate('course', {name:1})
 			.populate('groups.p1',{password:0,tokens:0})
 			.populate('groups.p2',{password:0,tokens:0})
 			.populate('groups.p3',{password:0,tokens:0})
 			.populate('groups.p4',{password:0,tokens:0})
+			
+			// .populate('groups.p1',{name:1,team:1})
+			// .populate('groups.p2',{name:1,team:1})
+			// .populate('groups.p3',{name:1,team:1})
+			// .populate('groups.p4',{name:1,team:1})
+
+			
 	
 		if (!round) {
 			return res.status(404).send()
 		}
-		
 		
 		res.send(round)
 
