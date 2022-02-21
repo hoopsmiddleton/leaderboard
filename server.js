@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 
 const app = express()
@@ -6,6 +7,7 @@ const courseRouter = require('./routes/course');
 const roundRouter = require('./routes/round');
 const groupRouter = require('./routes/group');
 const bParser = require('body-parser')
+
 
 const port = process.env.PORT || 3998
 

@@ -1,0 +1,148 @@
+:root {
+    --prmary-color: rgb(100, 153, 100);
+    --secondary-color: brown;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(181, 241, 221);
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: none;
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+.app-header {
+    background-color: var(--prmary-color);
+    box-shadow: 3px 3px 10px #888;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    /* font-size: 1.1rem; */
+    text-align: center;
+    
+}
+
+.app-header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    padding: 1px 5px 1px 5px;
+}
+
+.app-header .logo {
+    width: 90px;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid .cardbox {
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--secondary-color) solid;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px var(--secondary-color);
+}
+
+.grid .cardbox h4 {
+    margin-bottom: 5px;
+}
+
+.grid .cardbox p {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.grid .cardbox img {
+    width: 80px;
+    align-self: flex-end;
+}
+
+.grid :hover {
+    background-color: var(--prmary-color);
+}
+
+table thead {
+    text-align: center;
+    background-color: rgb(42, 216, 158);
+    
+}
+
+table tr {
+    border-color:rgb(42, 216, 158)
+}
+
+.app-footer {
+    background: rgb(202, 247, 232);
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.app-footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.app-footer ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-footer ul li i {
+    font-size: 22px;
+}
+
+#splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: opacity 1s;
+}
+
+#splash img {
+    width: 100%;
+}
+
+#splash.fade {
+    opacity: 0;
+}
+
+@media(min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

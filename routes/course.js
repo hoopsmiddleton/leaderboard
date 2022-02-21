@@ -1,4 +1,5 @@
 require('../db/mongoose')
+require('dotenv').config()
 
 const Course = require('../models/course')
 const Tee = require('../models/tee')
@@ -6,9 +7,11 @@ const Hole = require('../models/hole')
 const express = require('express')
 
 const r = new express.Router()
-const URL = '/leaderboard/api/v1'
+const APIURL = process.env.APIURL 
+const URL = process.env.URL
+// '/leaderboard/api/v1'
 
-r.post(`${URL}/hole`, async (req, res) => {
+r.post(`${APIURL}/hole`, async (req, res) => {
 
 	const hole = new Hole(req.body)
 
@@ -22,7 +25,7 @@ r.post(`${URL}/hole`, async (req, res) => {
 	}
 })
 
-r.post(`${URL}/tee`, async (req, res) => {
+r.post(`${APIURL}/tee`, async (req, res) => {
 
 	const tee = new Tee(req.body)
 
@@ -36,7 +39,7 @@ r.post(`${URL}/tee`, async (req, res) => {
 	}
 })
 
-r.post(`${URL}/course`, async (req, res) => {
+r.post(`${APIURL}/course`, async (req, res) => {
 
 	const course = new Course(req.body)
 
@@ -50,7 +53,7 @@ r.post(`${URL}/course`, async (req, res) => {
 	}
 })
 
-r.post(`${URL}/courses`, async (req, res) => {
+r.post(`${APIURL}/courses`, async (req, res) => {
 	
 	const courses = req.body
 
@@ -69,7 +72,7 @@ r.post(`${URL}/courses`, async (req, res) => {
 })
 
 
-r.patch(`${URL}/course/:id`, async (req, res) => {
+r.patch(`${APIURL}/course/:id`, async (req, res) => {
 	const updates = Object.keys(req.body)
 	const allowedUpdates = ['name', 'addr1', 'addr2', 'city', 'state', 'zip', 'url', 'phone']
 	const isValidOp = updates.every((u) => {
@@ -117,12 +120,12 @@ r.patch(`${URL}/course/:id`, async (req, res) => {
 	}
 })
 
-r.get(`${URL}/pairings`, (req, res) => {
+r.get(`${APIURL}/pairings`, (req, res) => {
 
 	res.render("pairings")
 })
 
-r.get(`${URL}/course`, async (req, res) => {
+r.get(`${APIURL}/course`, async (req, res) => {
 
 
 	try {
@@ -139,7 +142,7 @@ r.get(`${URL}/course`, async (req, res) => {
 	}
 })
 
-r.get(`${URL}/course/:id`, async (req, res) => {
+r.get(`${APIURL}/course/:id`, async (req, res) => {
 
 	const id = req.params.id
 	try {
@@ -156,7 +159,7 @@ r.get(`${URL}/course/:id`, async (req, res) => {
 	}
 })
 
-r.delete(`${URL}/course/:id`, async (req, res) => {
+r.delete(`${APIURL}/course/:id`, async (req, res) => {
 
 	const id = req.params.id
 	try {
