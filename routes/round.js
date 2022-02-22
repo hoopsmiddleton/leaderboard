@@ -85,8 +85,10 @@ router.get('/leaderboard/event', async (req, res) => {
 	const round = await Round.find({})
 			.populate('course')
 			
+
 	res.render("event", {round: round})
 })
+
 
 router.get(`${URL}/rounds`, async (req, res) => {
 

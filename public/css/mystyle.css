@@ -61,6 +61,7 @@ body {
     grid-gap: 10px;
 }
 
+
 .grid .cardbox {
     display: flex;
     flex-direction: column;
@@ -79,6 +80,13 @@ body {
     font-weight: bold;
     color: var(--secondary-color);
     margin-bottom: 20px;
+}
+
+a.divclick {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
 }
 
 .grid .cardbox img {
