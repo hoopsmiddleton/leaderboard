@@ -1,0 +1,33 @@
+:root {
+    --prmary-color: green;
+    --secondary-color: brown;
+}
+
+.table-header {
+    background-color: lightgray;
+    padding-top: 1px;
+    margin-top: 1px;
+}
+
+.redtext {
+    color: red;
+}
+
+.bluetext {
+    color: blue;
+
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(181, 241, 221);
+}
+
+table thead {
+    text-align: center;
+    background-color: rgb(42, 216, 158);
+}
+
+table tr {
+    border-color:rgb(42, 216, 158)
+}
